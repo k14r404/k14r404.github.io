@@ -5,9 +5,13 @@
   <title>Chiara Passaro</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
   <style>
     :root {
       --bg: #0e1624;
+      --sidebar: #0b1322;
       --card: #151f32;
       --text: #e6eaf2;
       --muted: #a9b2c7;
@@ -24,17 +28,95 @@
       margin: 0;
       background: var(--bg);
       color: var(--text);
+      display: flex;
     }
 
+    /* ===== Sidebar ===== */
+    .sidebar {
+      width: 240px;
+      background: var(--sidebar);
+      height: 100vh;
+      padding: 30px 20px;
+      position: fixed;
+      left: 0;
+      top: 0;
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .profile {
+      text-align: center;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #1f2a44;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.6rem;
+      margin: 0 auto 15px auto;
+      color: var(--accent);
+    }
+
+    .name {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .degree {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    .nav {
+      margin-top: 40px;
+    }
+
+    .nav a {
+      display: block;
+      padding: 10px 12px;
+      color: var(--text);
+      text-decoration: none;
+      border-radius: 6px;
+      margin-bottom: 6px;
+    }
+
+    .nav a:hover {
+      background: #1f2a44;
+    }
+
+    .icons {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .icons a {
+      color: var(--muted);
+      margin: 0 10px;
+      font-size: 1.2rem;
+    }
+
+    .icons a:hover {
+      color: var(--accent);
+    }
+
+    /* ===== Main content ===== */
     .container {
+      margin-left: 260px;
       max-width: 980px;
-      margin: 40px auto;
-      padding: 0 20px;
+      padding: 40px 30px;
     }
 
     h1 {
-      font-size: 2.4rem;
-      margin-bottom: 0.2rem;
+      font-size: 2.2rem;
+      margin-bottom: 6px;
     }
 
     h2 {
@@ -90,18 +172,48 @@
     a:hover {
       text-decoration: underline;
     }
+
+    @media (max-width: 900px) {
+      .sidebar {
+        display: none;
+      }
+      .container {
+        margin-left: 0;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <div class="container">
 
-    <h1>Chiara Passaro</h1>
-    <div class="subtitle">
-      M.S. Economics (STEM) — Arizona State University
+  <!-- ===== Sidebar ===== -->
+  <aside class="sidebar">
+    <div>
+      <div class="profile">
+        <div class="avatar">CP</div>
+        <div class="name">Chiara Passaro</div>
+        <div class="degree">M.S. Economics (STEM)<br>Arizona State University</div>
+      </div>
+
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+      </nav>
     </div>
 
-    <div class="card">
+    <div class="icons">
+      <a href="mailto:chiara.passaro@asu.edu"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/k14r404" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </aside>
+
+  <!-- ===== Main content ===== -->
+  <main class="container">
+
+    <section id="about" class="card">
       <h2>About</h2>
       <p>
         I am a graduate student in Economics at Arizona State University (W. P. Carey School of Business),
@@ -122,9 +234,9 @@
         <span class="tag">Market Design</span>
         <span class="tag">Empirical Econometrics</span>
       </div>
-    </div>
+    </section>
 
-    <div class="card">
+    <section id="education" class="card">
       <h2>Education</h2>
       <p><strong>Arizona State University — W. P. Carey School of Business</strong><br>
         M.S. Economics (STEM-designated)<br>
@@ -135,9 +247,9 @@
         B.S. Digital Economics and Finance (GPA: 3.4 / 4.0)<br>
         Chichester, UK — Sep 2022 – Jul 2025
       </p>
-    </div>
+    </section>
 
-    <div class="card">
+    <section id="experience" class="card">
       <h2>Professional Experience</h2>
       <p><strong>Business Operations Intern — Vimec SRL</strong></p>
       <ul>
@@ -145,9 +257,9 @@
         <li>Reduced turnaround time by ~18% through process optimization.</li>
         <li>Maintained structured inventory and order datasets, improving tracking consistency.</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="card">
+    <section id="projects" class="card">
       <h2>Projects</h2>
       <p><strong>Macroeconomic Time Series Forecasting</strong></p>
       <ul>
@@ -160,16 +272,8 @@
         <li>Cleaned and analyzed CDC county-level data using Python.</li>
         <li>Created visualizations highlighting regional disparities.</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="card">
-      <h2>Contact</h2>
-      <p>
-        Email: <a href="mailto:chiara.passaro@asu.edu">chiara.passaro@asu.edu</a><br>
-        GitHub: <a href="https://github.com/k14r404">github.com/k14r404</a>
-      </p>
-    </div>
-
-  </div>
+  </main>
 </body>
 </html>

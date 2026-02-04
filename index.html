@@ -1,8 +1,128 @@
 <!doctype html>
-<html>
-<head><meta charset="utf-8"><title>Site</title></head>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chiara Passaro</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
 <body>
-  <h1>IT WORKS </h1>
+  <div class="container">
+
+    <aside class="sidebar">
+      <div class="avatar">CP</div>
+      <h1 class="name">Chiara Passaro</h1>
+      <div class="role">M.S. Economics (STEM) — Arizona State University</div>
+
+      <nav class="nav">
+        <a class="active" href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#cv">Curriculum Vitae</a>
+      </nav>
+
+      <div class="btnrow" style="margin-top:14px;">
+        <a class="btn" href="mailto:passarochiara94@gmail.com">Email</a>
+        <a class="btn" href="https://linkedin.com/in/chiara-passaro" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="assets/cv/resume.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+      </div>
+
+      <div class="footer" style="margin-top:14px;">
+        Last updated: <span id="date"></span>
+      </div>
+    </aside>
+
+    <main class="main">
+
+      <section class="section" id="about">
+        <h2>About</h2>
+        <p class="sub">
+          I’m a graduate student in Economics at Arizona State University (W. P. Carey School of Business).
+          My interests include applied microeconomics, empirical methods, and market design / industrial organization.
+        </p>
+        <div class="pills">
+          <span class="pill">Applied Micro</span>
+          <span class="pill">Empirical IO</span>
+          <span class="pill">Econometrics</span>
+          <span class="pill">Data (Python / R / Excel)</span>
+        </div>
+      </section>
+
+      <section class="section" id="research">
+        <h2>Research</h2>
+        <p class="sub">Working papers / interests (placeholder — we can tailor this to your actual topics).</p>
+
+        <div class="cards">
+          <div class="card">
+            <h3>Interests</h3>
+            <p>Industrial Organization, market design, education & labor, and applied econometrics.</p>
+            <div class="meta">Update with your professor / course projects as you go.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <h2>Projects</h2>
+        <p class="sub">A few things you can show (you can add links later).</p>
+
+        <div class="cards">
+          <div class="card">
+            <h3>Macroeconomic Time Series Forecasting</h3>
+            <p>Built SARIMA / VAR models for forecasting and interpreting impulse response functions.</p>
+            <div class="meta">ASU — Dec 2025</div>
+          </div>
+
+          <div class="card">
+            <h3>Heart Disease Mortality in the U.S. (2019–2021)</h3>
+            <p>Cleaned and analyzed CDC county-level data using Python; created visualizations of disparities.</p>
+            <div class="meta">ASU — Dec 2025</div>
+          </div>
+
+          <div class="card">
+            <h3>Undergraduate Dissertation: GFC & Developing Countries</h3>
+            <p>Compared policy responses and institutional constraints across developing economies using secondary sources.</p>
+            <div class="meta">University of Chichester — May 2025</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="education">
+        <h2>Education</h2>
+
+        <div class="cards">
+          <div class="card">
+            <h3>Arizona State University — W. P. Carey School of Business</h3>
+            <p>M.S. Economics (STEM-designated)</p>
+            <div class="meta">Aug 2025 – May 2026</div>
+          </div>
+
+          <div class="card">
+            <h3>University of Chichester — UK</h3>
+            <p>B.S. Digital Economics and Finance (GPA: 3.46/4.00)</p>
+            <div class="meta">Sep 2022 – Jul 2025</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="cv">
+        <h2>Curriculum Vitae</h2>
+        <p class="sub">
+          Download the PDF version of my CV:
+        </p>
+        <div class="btnrow">
+          <a class="btn" href="assets/cv/resume.pdf" target="_blank" rel="noopener">Open CV (PDF)</a>
+          <a class="btn" href="assets/cv/resume.pdf" download>Download CV</a>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <script>
+    document.getElementById("date").textContent = new Date().toLocaleDateString();
+  </script>
 </body>
 </html>
-2
